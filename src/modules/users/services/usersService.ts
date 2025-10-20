@@ -1,5 +1,5 @@
 // Users Service - API calls y lógica de negocio
-import type { User } from '../types';
+import type { CreateUserDto, User } from '../types';
 
 // Usar el proxy configurado en next.config.ts
 const API_BASE_URL = '/api';
@@ -26,9 +26,41 @@ export async function getAllUsers(): Promise<User[]> {
 }
 
 // 🔄 Funciones para implementar por los estudiantes:
+export async function getUserById(id: number): Promise<User>{
+  try {
+    console.log('userId: ', id)
+    const response = await fetch(`${API_BASE_URL}/users/${id}`);
+    if (!response.ok) {
+      throw new ApiError(response.status, 'Error al obtener usuario');
+    }
+    return response.json();
+  } catch (error) {
+    console.error('Error en getUserById:', error);
+    throw error;
+  }  
+}
 
-// export async function getUserById(id: number): Promise<User>
-// export async function createUser(data: CreateUserDto): Promise<User>
+export async function createUser(data: CreateUserDto): Promise<User> {
+  try { 
+    const response = await fetch(`${API_BASE_URL}/users`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (!response.ok) {
+      throw new ApiError(response.status, 'No se pudo crear el usuario');
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.error('Error en createUser:', error);
+    throw error;
+  }
+}
+
 // export async function updateUser(id: number, data: UpdateUserDto): Promise<User>
 // export async function deleteUser(id: number): Promise<void>
 // export async function getUserRoutines(id: number): Promise<WeeklyRoutine[]>
