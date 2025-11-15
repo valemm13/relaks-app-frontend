@@ -1,3 +1,2 @@
-// Barrel exports para componentes compartidos
-export { default as Header } from './Header';
-export { default as Footer } from './Footer';
+// Exportar acda archivo que se agrega a la carpeta
+export {default as Header} from './header'

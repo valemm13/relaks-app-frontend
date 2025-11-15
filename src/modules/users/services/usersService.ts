@@ -64,5 +64,3 @@ export async function createUser(data: CreateUserDto): Promise<User> {
 // export async function updateUser(id: number, data: UpdateUserDto): Promise<User>
 // export async function deleteUser(id: number): Promise<void>
 // export async function getUserRoutines(id: number): Promise<WeeklyRoutine[]>
-// export function filterUsers(users: User[], filters: UserFilters): User[]
-// export function transformUserForDisplay(user: User): UserWithStats

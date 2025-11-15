@@ -7,12 +7,10 @@ export function UserForm({onSubmit}: { onSubmit: (data: any) => void}){
   const [form, setForm] = useState({
     name: '',
     email: '',
-    age: '',
-    weight: '',
-    height: '',
+    password: '',
   });
 
-  // Esta función se ejecuta cada vez que el usuario escribe algo en un cam
+  // Esta función se ejecuta cada vez que el usuario escribe algo en un campo
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) =>{
     setForm({
       ...form,
@@ -27,22 +25,17 @@ export function UserForm({onSubmit}: { onSubmit: (data: any) => void}){
     const userData = {
       name: form.name,
       email: form.email,
-      age: parseInt(form.age),
-      weight: parseInt(form.weight),
-      height: parseInt(form.height),
+      contraseña: form.password,
     };
 
     onSubmit(userData); 
-    
     alert('Usuario creado');
     
     // Limpiar el formulario después de guardar
     setForm({
       name: '',
       email: '',
-      age: '',
-      weight: '',
-      height: '',
+      password: '',
     });
   };
 
@@ -69,28 +62,11 @@ export function UserForm({onSubmit}: { onSubmit: (data: any) => void}){
       />
 
       <input
-        name="age"
-        placeholder="Edad"
-        type="number"
-        value={form.age}
-        onChange={handleChange}
-        className="border rounded w-full p-2"
-      />
-
-      <input
-        name="weight"
-        placeholder="Peso (kg)"
-        type="number"
-        value={form.weight}
-        onChange={handleChange}
-        className="border rounded w-full p-2"
-      />
-
-      <input
-        name="height"
-        placeholder="Altura (cm)"
-        type="number"
-        value={form.height}
+        name="contraseña"
+        placeholder="Contraseña"
+        type="password"
+        min = "0"
+        value={form.password}
         onChange={handleChange}
         className="border rounded w-full p-2"
       />
@@ -99,7 +75,7 @@ export function UserForm({onSubmit}: { onSubmit: (data: any) => void}){
         type="submit"
         className="bg-blue-600 text-white px-4 py-2 rounded w-full hover:bg-blue-700"
       >
-        Guardar Usuario
+        Registrar usuario
       </button>
     </form>
   );
