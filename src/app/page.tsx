@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-100 font-sans flex flex-col">
 
-      {/* 🔹 Sección principal */}
+      {/* Sección principal */}
       <main className="flex flex-col md:flex-row items-center justify-center px-10 py-16 gap-10 bg-white flex-grow">
         <img src="estudiantes.png" className="w-96 max-w-sm" alt="Estudiantes" />
 
@@ -28,7 +28,7 @@ export default function Home() {
         </div>
       </main>
 
-      {/* 🔹 Sección de tarjetas */}
+      {/* Sección de tarjetas */}
       <section className="flex flex-wrap justify-center gap-8 mt-6 px-8 pb-12">
         <div className="bg-gray-200 p-10 shadow text-center w-72 rounded-lg">
           <h3 className="font-bold text-lg mb-2 text-gray-900">Calificar</h3>

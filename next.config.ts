@@ -9,16 +9,16 @@ const nextConfig: NextConfig = {
         destination: 'http://localhost:3001/users/:path*'
       },
       {
-        source: '/api/profiles/:path*',
-        destination: 'http://localhost:3001/profiles/:path*'
+        source: '/api/materias/:path*',
+        destination: 'http://localhost:3001/materias/:path*'
       },
       {
-        source: '/api/exercises/:path*',
-        destination: 'http://localhost:3001/exercises/:path*'
+        source: '/api/profes/:path*',
+        destination: 'http://localhost:3001/profes/:path*'
       },
       {
-        source: '/api/routines/:path*',
-        destination: 'http://localhost:3001/routines/:path*'
+        source: '/api/calificaciones/:path*',
+        destination: 'http://localhost:3001/calificaciones/:path*'
       }
     ];
   },

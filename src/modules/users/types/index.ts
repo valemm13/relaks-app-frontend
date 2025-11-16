@@ -1,14 +1,28 @@
-// Tipos específicos del módulo Users
-import type { User, CreateUserDto, UpdateUserDto } from '@/types/api';
-
-
-export interface UserFilters {
-  search?: string;
-  ageRange?: {
-    min: number;
-    max: number;
-  };
-  goal?: string;
+// Tipos usados en tu módulo de Users
+export interface User {
+  id: number;
+  name: string;
+  email: string;
+  avatar?: string;
 }
 
-export type { User, CreateUserDto, UpdateUserDto };
+export interface CreateUserDto {
+  name: string;
+  email: string;
+  avatar?: string;
+}
+
+export interface UpdateUserDto {
+  name?: string;
+  email?: string;
+  avatar?: string;
+}
+
+export interface SearchUserDto{
+  name?: string;
+  email?: string;
+}
+export interface UserFilters {
+  name?: string;
+  email?: string;
+}
