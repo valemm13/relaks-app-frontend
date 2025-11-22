@@ -1,0 +1,318 @@
+/* ============================
+   ESTILOS GENERALES DE LA PÁGINA
+   ============================ */
+
+.rp-page {
+  padding: 40px 80px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: #333;
+}
+
+/* ============================
+   CARD SUPERIOR (SELECCIÓN)
+   ============================ */
+
+.rp-card {
+  max-width: 900px;
+  margin: 0 auto;
+  border: 1px solid #d1d1d1;
+  background-color: #f8f0f0;
+  border-radius: 4px;
+}
+
+.rp-card-header {
+  background-color: #c1d7f5;
+  padding: 16px 24px;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 4px 4px 0 0;
+}
+
+.rp-card-body {
+  padding: 24px;
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.rp-card-body--disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.rp-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.rp-field label {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.rp-required {
+  color: #e74c3c;
+}
+
+.rp-field select {
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  padding: 8px 10px;
+  font-size: 14px;
+  background-color: #fff;
+  transition: border-color 0.2s ease;
+}
+
+.rp-field select:focus {
+  border-color: #285a9c;
+  outline: none;
+}
+
+.rp-card-footer {
+  padding: 16px 24px;
+  text-align: right;
+}
+
+/* ============================
+   BOTONES
+   ============================ */
+
+.rp-btn {
+  border: none;
+  padding: 10px 28px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.rp-btn-primary {
+  background-color: #285a9c;
+  color: #fff;
+}
+
+.rp-btn-primary:hover:not(.rp-btn--disabled) {
+  background-color: #1f4a80;
+}
+
+.rp-btn--disabled {
+  background-color: #d6d6d6 !important;
+  color: #888 !important;
+  cursor: not-allowed;
+}
+
+/* ============================
+   INSTRUCCIONES
+   ============================ */
+
+.rp-instructions {
+  max-width: 900px;
+  margin: 24px auto 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* ============================
+   SECCIÓN DE CALIFICACIÓN (PASO 2)
+   ============================ */
+
+.rp-rating-section {
+  max-width: 900px;
+  margin: 40px auto 0;
+  display: grid;
+  grid-template-columns: 0.9fr 1.3fr;
+  column-gap: 40px;
+  align-items: flex-start;
+}
+
+/* -----------------------------
+   LADO IZQUIERDO
+   ----------------------------- */
+
+.rp-rating-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.rp-rating-title {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.rp-prof-card {
+  background-color: #dcdcdc;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  align-items: center;
+  column-gap: 16px;
+  border-radius: 4px;
+}
+
+.rp-prof-photo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.rp-prof-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rp-prof-photo-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #bbb;
+}
+
+.rp-prof-name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* -----------------------------
+   LADO DERECHO
+   ----------------------------- */
+
+.rp-rating-right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.rp-rating-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+}
+
+/* ============================
+   ESTRELLAS RATING
+   ============================ */
+
+.rp-stars {
+  display: flex;
+  gap: 4px;
+}
+
+.rp-star {
+  border: none;
+  background: transparent;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 0;
+  color: #ccc;
+  transition: color 0.2s ease;
+}
+
+.rp-star:hover {
+  color: #f1c40f;
+}
+
+.rp-star--filled {
+  color: #f1c40f;
+}
+
+/* ============================
+   MENSAJES (ÉXITO / ERROR)
+   ============================ */
+
+.rp-messages {
+  max-width: 900px;
+  margin: 24px auto 0;
+}
+
+.rp-message {
+  padding: 10px 14px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.rp-message--error {
+  background-color: #fdecea;
+  color: #c0392b;
+}
+
+.rp-message--success {
+  background-color: #e9f7ef;
+  color: #1e8449;
+}
+
+/* ============================
+   ESTADO FINAL (ÉXITO)
+   ============================ */
+
+.rp-rating-right--done {
+  align-items: flex-start;
+}
+
+.rp-stars--readonly .rp-star-label {
+  font-size: 24px;
+  color: #ccc;
+}
+
+.rp-stars--readonly .rp-star-label.rp-star--filled {
+  color: #f1c40f;
+}
+
+.rp-finished-text {
+  margin-top: 16px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.rp-link-home {
+  margin-top: 8px;
+  font-size: 14px;
+  text-decoration: underline;
+  color: #285a9c;
+}
+
+/* ============================
+   MODAL DE CONFIRMACIÓN
+   ============================ */
+
+.rp-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.rp-modal {
+  background-color: #fff;
+  padding: 20px 24px;
+  border-radius: 6px;
+  min-width: 320px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+.rp-modal h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.rp-modal p {
+  margin: 0 0 16px;
+  font-size: 14px;
+}
+
+.rp-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.rp-btn-secondary {
+  background-color: #e0e0e0;
+  color: #333;
+}
