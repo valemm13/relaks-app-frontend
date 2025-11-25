@@ -8,7 +8,7 @@ export default function Header() {
     const pathname = usePathname();
     const [openMenu, setOpenMenu] = useState(false);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
-    
+   
     // Al cargar el header, revisa si hay login guardado
     useEffect(() => {
         const logged = localStorage.getItem("loggedIn");
