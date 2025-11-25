@@ -1,6 +1,9 @@
 import { PROFES_FAKE } from "../../../modules/profes/data";
+interface ProfePageProps {
+  params: { nombre: string };
+}
 
-export default function ProfePage({ params }: { params: { nombre: string } }) {
+export default function ProfePage({ params }: ProfePageProps) {
   const profe = PROFES_FAKE.find(
     (p) => p.nombre.toLowerCase() === params.nombre.toLowerCase()
   );
